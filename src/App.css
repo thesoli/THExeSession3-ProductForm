@@ -1,0 +1,136 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+body {
+  background: #363636;
+  display: flex;
+  justify-content: center;
+}
+
+/* Cost Card */
+.cost-card {
+  display: flex;
+  justify-content: space-between;
+  width: 90rem;
+  height: 5rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin: 10px;
+}
+
+.cost-card-detail {
+  display: flex;
+}
+
+.cost-card-img {
+  margin-left: 2rem;
+  width: 4rem;
+  height: auto;
+}
+
+.cost-card-title {
+  margin-left: 1rem;
+}
+
+.cost-card-amount {
+  display: flex;
+  align-items: center;
+}
+
+.cost-card-count {
+  margin: 1rem;
+  display: flex;
+}
+
+.cost-card-price {
+  margin: 2rem;
+}
+
+.cost-card-count-btn {
+  justify-self: center;
+  margin: 2rem;
+  height: 1.5rem;
+  width: 2rem;
+}
+
+.cost-card-count-number {
+  margin: 2rem 0;
+}
+
+/* Form Card*/
+
+.form-card {
+  display: flex;
+  justify-content: space-between;
+  width: 90rem;
+  height: 5rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin: 10px;
+}
+
+.form-card-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card-input-item {
+  margin: 0.3rem 1.7rem;
+  height: 1.4rem;
+  width: 78rem;
+  border-radius: 0.2rem;
+}
+
+.form-card-input-btn {
+  height: 3.7rem;
+  width: 7rem;
+  margin-right: 2rem;
+  text-transform: uppercase;
+  background: #363636;
+  color: #fff;
+  border-radius: 0.5rem;
+}
