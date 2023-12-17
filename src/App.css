@@ -89,8 +89,23 @@ body {
 }
 
 .cost-card-count-btn {
-  justify-self: center;
+  margin: 2rem 1rem;
+  height: 1.5rem;
+  width: 2rem;
+  background: #fff;
+}
+
+.cost-card-count-trash-btn {
   margin: 2rem;
+  height: 1.7rem;
+  background: #fff;
+  width: 2rem;
+  display: flex;
+  justify-self: center;
+}
+
+.trash-btn-img {
+  justify-self: center;
   height: 1.5rem;
   width: 2rem;
 }

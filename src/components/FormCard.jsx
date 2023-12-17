@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-function FormCard({ data }) {
+function FormCard({ addNewProduct }) {
   const [myFormData, setMyFormData] = useState({ title: "", price: 0 });
 
   const submitHandler = (element) => {
     element.preventDefault();
-    console.log(myFormData);
+    addNewProduct(myFormData);
+    setMyFormData({ title: "", price: 0 });
   };
 
   const titleChangeHandler = (element) => {
@@ -25,12 +26,14 @@ function FormCard({ data }) {
             placeholder="Product title"
             className="form-card-input-item"
             onChange={titleChangeHandler}
+            value={myFormData.title}
           />
           <input
             type="number"
             placeholder="Product price"
             className="form-card-input-item"
             onChange={priceChangeHandler}
+            value={myFormData.price}
           />
         </div>
 
