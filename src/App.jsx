@@ -6,7 +6,7 @@ import CostCard from "./components/CostCard";
 import FormCard from "./components/FormCard";
 
 function App() {
-  const products = [
+  const [products, setProducts] = useState([
     {
       id: Math.random(),
       title: "MacBook Pro",
@@ -30,14 +30,22 @@ function App() {
       count: 1,
       img: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-holiday-watch-ultra-2-202311?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1698766696911",
     },
-  ];
+  ]);
+
+  const deleteById = (id) => {
+    setProducts(
+      products.filter((item) => {
+        return item.id !== id;
+      })
+    );
+  };
 
   return (
     <div>
       <FormCard data={products} />
 
       {products.map((item) => {
-        return <CostCard key={item.id} data={item} />;
+        return <CostCard key={item.id} data={item} deleteById={deleteById} />;
       })}
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function CostCard({ data }) {
+function CostCard({ data, deleteById }) {
   const [myCount, setMyCount] = useState(1);
 
   const decreaseHandler = () => {
@@ -13,6 +13,10 @@ function CostCard({ data }) {
     setMyCount(myCount + 1);
   };
 
+  const deleteHandler = () => {
+    deleteById(data.id);
+  };
+
   return (
     <div className="cost-card">
       <div className="cost-card-detail">
@@ -22,6 +26,9 @@ function CostCard({ data }) {
 
       <div className="cost-card-amount">
         <div className="cost-card-count">
+          <button onClick={deleteHandler} className="cost-card-count-btn">
+            X
+          </button>
           <button onClick={decreaseHandler} className="cost-card-count-btn">
             -
           </button>
